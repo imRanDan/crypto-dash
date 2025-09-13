@@ -16,7 +16,9 @@ function App() {
 
   return (
     <div>
-      hi
+      <h1>Crypto Dashboard</h1>
+      <p>Check the console for API data!</p>
+      <p>Found {coins.length}</p>
     </div>
   )
 }
