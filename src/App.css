@@ -20,7 +20,7 @@
  .coin-grid {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, mimax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
  }
 
  .coin-card {
@@ -80,6 +80,12 @@
 
 
  /* Responsive design stuff */
+
+ @media (max-width: 1024px) {
+  .coin-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+ }
 
  @media (max-width: 768px) {
   .coin-list-container {
