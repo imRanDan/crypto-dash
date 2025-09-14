@@ -57,3 +57,25 @@
   color: #111827;
   margin-bottom: 4px;
  }
+
+ .coin-price {
+  font-size: 16px;
+  color: #374151;
+  margin-bottom: 4px;
+  font-weight: 500;
+ }
+
+ .coin-change {
+  font-size: 14px;
+  font-weight: 500;
+ }
+
+ .coin-change.positive {
+  color: #059669;
+ }
+
+ .coin-change.negative {
+  color: #dc2626;
+ }
+
+ 
