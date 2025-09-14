@@ -1,5 +1,6 @@
 import { useEffect, useState} from 'react'
 import './App.css'
+import CoinList from './components/CoinList'
 
 
 function App() {
@@ -17,8 +18,9 @@ function App() {
   return (
     <div>
       <h1>Crypto Dashboard</h1>
-      <p>Check the console for API data!</p>
-      <p>Found {coins.length}</p>
+      <CoinList />
+      {/* <p>Check the console for API data!</p>
+      <p>Found {coins.length}</p> */}
     </div>
   )
 }
