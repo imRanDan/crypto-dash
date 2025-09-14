@@ -1,7 +1,30 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
 }
+ */
 
+ .coin-list-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+ }
+
+ .coin-list-title {
+  text-align: center;
+  margin-bottom: 30px;
+ }
+
+ .coin-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, mimax(300px, 1fr));
+ }
+
+ .coin-card {
+  padding: 20px;
+  border: 1px solid #e5e7eb;
+  border
+ }

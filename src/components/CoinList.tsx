@@ -38,7 +38,6 @@ const CoinList = () => {
                         </div>
                     </div>
 
-                    <br />
                     Price: ${coin.current_price}
                     <br/>
                     24hr Change: {coin.price_change_percentage_24h?.toFixed(2)}%
