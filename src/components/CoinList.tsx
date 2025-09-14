@@ -36,6 +36,7 @@ const CoinList = () => {
                         <div className="coin-name">
                         {coin.name}({coin.symbol?.toUpperCase()})
                         </div>
+                        <div className="coin-price">
                     </div>
 
                     Price: ${coin.current_price}
