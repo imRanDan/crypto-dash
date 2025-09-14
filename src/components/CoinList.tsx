@@ -5,6 +5,11 @@ const CoinList = () => {
       const [coins, setCoins] = useState<any[]>([])
       const [loading, setLoading] = useState(true)
 
+      const [searchTerm, setSearchTerm] = useState('');
+
+      const filteredCoins = coins.filter(coin =>
+        coin.name.toLowerCase().includes(searchTerm.toLowerCase()) || coin.symbol.toLowerCase().includes(searchTerm.toLowerCase())
+      );
 
       useEffect(() => {
         const fetchCoins = async () => {
@@ -25,9 +30,15 @@ const CoinList = () => {
 
       if (loading) return <div>Loading...</div>
 
+      
+
       return (
         <div className="coin-list-container">
             <h2 className="coin-list-title">Top Cryptocurrencies</h2>
+
+            {/* Search goes here */}
+
+
             <div className="coin-grid">
                 {coins.map((coin, index) => (
                   <div key={coin.id || index} className="coin-card">
