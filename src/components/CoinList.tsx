@@ -37,11 +37,12 @@ const CoinList = () => {
                         {coin.name}({coin.symbol?.toUpperCase()})
                         </div>
                         <div className="coin-price">
+                            ${coin.current_price?.toLocaleString()}
+                        </div>
+                        <div className={`coin-change ${coin.price_change_percentage_24h >= 0 ? 'positive' : 'negative'}`}>
+                            24hr: {coin.price_change_percentage_24h?.toFixed(2)}%
+                        </div>
                     </div>
-
-                    Price: ${coin.current_price}
-                    <br/>
-                    24hr Change: {coin.price_change_percentage_24h?.toFixed(2)}%
             </div>
                 ))}
         </div>
