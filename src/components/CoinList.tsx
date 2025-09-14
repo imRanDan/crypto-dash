@@ -37,10 +37,17 @@ const CoinList = () => {
             <h2 className="coin-list-title">Top Cryptocurrencies</h2>
 
             {/* Search goes here */}
+            <input
+                type="text"
+                placeholder="Search cryptocurrencies..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="search-input"
+            />
 
 
             <div className="coin-grid">
-                {coins.map((coin, index) => (
+                {filteredCoins.map((coin, index) => (
                   <div key={coin.id || index} className="coin-card">
                     <img src={coin.image} alt={coin.name} className="coin-image" />  
                     <div className="coin-info">
