@@ -26,13 +26,18 @@ const CoinList = () => {
       if (loading) return <div>Loading...</div>
 
       return (
-        <div>
-            <h2>Top Cryptocurrencies</h2>
-            <div>
-                {coins.map((coin) => (
-                  <div key={coin.id} style={{ padding: '10px', border: '1px solid #ccc', marign: '5px'}}>
-                    <img src={coin.image} alt={coin.name} width="20" />  
-                    <strong>{coin.name}</strong> ({coin.symbol.toUpperCase()})
+        <div className="coin-list-container">
+            <h2 className="coin-list-title">Top Cryptocurrencies</h2>
+            <div className="coin-grid">
+                {coins.map((coin, index) => (
+                  <div key={coin.id || index} className="coin-card">
+                    <img src={coin.image} alt={coin.name} className="coin-image" />  
+                    <div className="coin-info">
+                        <div className="coin-name">
+                        {coin.name}({coin.symbol?.toUpperCase()})
+                        </div>
+                    </div>
+
                     <br />
                     Price: ${coin.current_price}
                     <br/>
