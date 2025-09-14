@@ -26,5 +26,34 @@
  .coin-card {
   padding: 20px;
   border: 1px solid #e5e7eb;
-  border
+  border-radius: 12px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.15)
+ }
+
+ .coin-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-color: #d1d5db;
+ }
+
+ .coin-image {
+  width: 48px;
+  height: 48x;
+  border-radius: 50%;
+ }
+
+ .coin-info {
+  flex: 1;
+ }
+
+ .coin-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
  }
