@@ -112,6 +112,12 @@
  }
 
  @media (max-width: 768px) {
+
+  .search-input {
+    max-width: none;
+    width: calc(100% - 32px)
+  }
+
   .coin-list-container {
     padding: 16px;
   }
