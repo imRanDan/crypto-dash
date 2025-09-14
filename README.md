@@ -1,69 +1,45 @@
-# React + TypeScript + Vite
+# Crypto Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React/TypeScript dashboard for tracking cryptocurrency prices and market data.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://crypto-dash-h59k.vercel.app/]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## API Choice
 
-## Expanding the ESLint configuration
+**CoinGecko API** - Selected for several key reasons:
+- No authentication required (perfect for take-home projects)
+- Reliable, well-documented endpoints
+- Rich data including prices, market caps, and 24h changes
+- High-quality coin icons and metadata
+- Excellent uptime and performance
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Design Decisions
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Planning:** Wireframed the layout structure before development to establish component hierarchy and responsive breakpoints.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+**Grid Layout:** Responsive 4-column grid that adapts smoothly across devices (4→3→2→1 columns) for optimal viewing on any screen size.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+**Search Functionality:** Real-time filtering by coin name or symbol, allowing users to quickly find specific cryptocurrencies.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Visual Hierarchy:** Clean card-based design with color-coded price changes (green for gains, red for losses) for immediate visual feedback.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Performance:** Fetches top 20 cryptocurrencies to balance data richness with fast load times.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Technology Stack
+
+- React with TypeScript
+- CSS Grid for responsive layout
+- Deployed on Vercel
+
+## Future Improvements
+
+- Individual coin detail pages with historical charts
+- Portfolio tracking with local storage
+- Global market statistics header
+- Price alerts and favorites functionality
+- Dark mode toggle
+- Additional market data (volume, market cap rankings)
+
+## Development Time
+
+Built in approximately 6 hours as requested.
