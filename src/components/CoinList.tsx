@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import type { Coin } from "../types/crypto";
 
 const CoinList = () => {
-      const [coins, setCoins] = useState<any[]>([])
+      const [coins, setCoins] = useState<Coin[]>([])
       const [loading, setLoading] = useState(true)
 
       const [searchTerm, setSearchTerm] = useState('');
